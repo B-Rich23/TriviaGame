@@ -4,11 +4,13 @@
 var correct = 0;
 var incorrect = 0;
 
-var timer = 5;
+var timer = 3;
 
 var intervalId;
 
-var trivia = ["1.What is the highest grossing movie of all-time?", "2. From 2000-2010, which NBA team won the most championships?", "3. Who holds the Guinness record for best selling album of all-time?", "4. Who was the highest paid actor in 2017?",]
+var trivia = triviaData.slice(); 
+	timeToGuess = questionLength;
+	gameLength = trivia.length;
 
 // function hide() {
 //     $("button").attr("class", "btn-disabled");
@@ -37,7 +39,7 @@ var trivia = ["1.What is the highest grossing movie of all-time?", "2. From 2000
       	stop();
 
         // TODO: Show the loading gif in the "image-holder" div.
-  $("#image-holder").html("<img src='assets/images/avatar.gif' width='800px' height='400px'/>");
+  $("#image-holder").html("<img src='assets/images/tzuricute.gif'/>");
       }
     }
 
