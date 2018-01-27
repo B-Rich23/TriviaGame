@@ -32,3 +32,12 @@ display: none;
 h2 {
 	margin-left: 29px;
 }
+
+ p: hover {
+ 	transition: 0;
+
+}
+
+.questions {
+	
+}

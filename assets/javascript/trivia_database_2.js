@@ -1,4 +1,4 @@
-// Trivia Game database array of objects
+// Trivia Game database object
 
 var triviaData = [
 	{

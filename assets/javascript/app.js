@@ -4,20 +4,20 @@
 var correct = 0;
 var incorrect = 0;
 
-var timer = 3;
+var timer = 5;
 
 var intervalId;
 
 var trivia; 
 
 var initialize;
-	// timeToGuess = questionLength;
-	// gameLength = trivia.length;
+	
+
+var result;
+
+var displayImage;
 
  
-//     $("button").attr("class", "btn-disabled");
-    
-// 	}
 $(document).ready(function() {
 
 
@@ -29,17 +29,6 @@ $(document).ready(function() {
 
 		// Change class to hide start button
 		$("#start").toggleClass('btn-primary btn-disabled');
-
-//       	function hide() {
-//     $("#start").attr("display", "hidden");
-    
-// }
-		
-      	// hide();
-
-      	//  The run function sets an interval
-    //  that runs the decrement function once a second.
-    // initialize = run();
 
 
     	// For loop to iterate through each index of trivia array
@@ -56,59 +45,82 @@ $(document).ready(function() {
 
       //  Show the number in the #show-timer tag.
       $("#show-timer").html("<h2>Time Remaining: " + timer + "</h2>");
-      $("#trivia").html("<h2>" + trivia.question1 + "</h2>");
-      $("#option1").html("<h2>" + trivia.answers1[0] + "</h2>");
-      $("#option2").html("<h2>" + trivia.answers1[1] + "</h2>");
-      $("#option3").html("<h2>" + trivia.answers1[2] + "</h2>");
-      $("#option4").html("<h2>" + trivia.answers1[3] + "</h2>");
+      $("#trivia").html("<h4>" + trivia.question1 + "</h4>");
+      $("#option1").html("<h4>" + trivia.answers1[0] + "</h4>");
+      $("#option2").html("<h4>" + trivia.answers1[1] + "</h4>");
+      $("#option3").html("<h4>" + trivia.answers1[2] + "</h4>");
+      $("#option4").html("<h4>" + trivia.answers1[3] + "</h4>");
 
+      // // Hover method when mouse hovers over an answer
+      // $("p").hover(function(){
+      //   $(this).css("background-color", "turquoise");
+        
 
-      //  Once number hits zero...
+      //  Once timer hits zero...
       if (timer === 0) {
-      	stop();
-
-        // TODO: Show the loading gif in the "image-holder" div.
-  $("#image-holder").html("<img " + trivia.image1 + ">");
-      }
-    }
-
-    //  The stop function
+      	
+      	//  The stop function
     function stop() {
 
       //  Clears our intervalId
       //  We just pass the name of the interval
       //  to the clearInterval function.
       clearInterval(intervalId);
+
+      	stop();
+    
+    }
+
+      	// setTimeout(displayImage, 5000);
+
+      	$(".questions").empty();
+	// 
+		$("#answer").html("<h2>" + trivia.answerDetail1 + "</h2>");
+
+	
+        // TODO: Show the loading gif in the "image-holder" div.
+  		$("#image-holder").html("<img " + trivia.image1 + ">");
+  		incorrect++;
+
+  	}
+
+    };
+ //    	$("#option1").on("click", function() {
+ //    		$(".questions").empty();
+	// // 
+	// 	$("#answer").html("<h2>" + trivia.answerDetail1 + "</h2>");
+
+
+ //        // TODO: Show the loading gif in the "image-holder" div.
+ //  		$("#image-holder").html("<img " + trivia.image1 + ">");
+      
+
+ //  		correct ++
+
+      // })
+
+//  The stop function
+    function stop() {
+
+      //  Clears our intervalId
+      //  We just pass the name of the interval
+      //  to the clearInterval function.
+      clearInterval(intervalId);
+
+      	stop();
+    
     }
 })
 
-})
+});
 
-
-      	//  Execute the run function.
-    	// run();
-    
-        //  Set the button alert's timeout to run three seconds after the function's called.
-        // delayButtonAlert = setTimeout(function() {
-        //   alert("Alert #2");
-        // }, 3000);
-    
 
  
+      
 
 
     
 
-// function timeUp() {
-
-//   // in the element with an id of time-left add an h2 saying Time's Up!
-//   // console log done
-//   console.log("done");
-//   console.log("time is up");
-
-//   //  The following line will play the audio file we linked to above:
-//   audio.play();
-// }
 
 
 
@@ -117,6 +129,8 @@ $(document).ready(function() {
 
 //first question with timer set to 25 seconds is created and pushed to html
 // setTimeout(timeUp, 1000 * 25);
+
+// setTimeout(displayImage, 5000);
 
 //conditional for correct, incorrect, and timeout guesses
 

@@ -19,29 +19,50 @@
 		  			<br>
 		  			<br>
 
+					
 		  			<!-- Count down for questions -->
-					<p class="lead"><span id="show-timer"></span></p>
-					<br>
-					<br>
+		  			<div id="questions-section" style="display: none">
+						<span id="show-timer" class="lead"></span>
+						<br>
+						<br>
 
-					<!-- Empty div where trivia content will appear -->
-					<div id="trivia" class="questions"></div>
-					<br>
-					<br>
-						<p id="option1" class="questions"></p>
+						<!-- Empty div where trivia content will appear -->
+						<div id="trivia" class="questions"></div>
 						<br>
-						<p id="option2" class="questions"></p>
 						<br>
-						<p id="option3" class="questions"></p>
+							<p id="option1" class="questions"></p>
+							<br>
+							<p id="option2" class="questions"></p>
+							<br>
+							<p id="option3" class="questions"></p>
+							<br>
+							<p id="option4" class="questions"></p>
 						<br>
-						<p id="option4" class="questions"></p>
-					<br>
-					<br>
-					<!-- Empty div gif content will appear -->
-					<div id="image-holder"></div>
+						<br>
+					</div>
+
+					<!-- Empty div where Trivia answer appears -->
+					<div id="answer-section" style="display: none">
+						<p id="answer-response"></p>
+						<br />
+						<br />
+						<p id="answer" class="answers"></p>
+						<br>
+						<br>
+
+						<!-- Empty div gif content will appear -->
+						<div id="image-holder" class="answers"></div>
+					</div>
+
+					<!-- Div houses game over screen -->
+					<div id="gameover">
+						<p id="correct"></p>
+						<br>
+						<p id="incorrect"></p>
+					</div>
 
 					<!-- Div that contains start button -->
-					<div id="hidden"><button type="button" id="start" class="btn btn-primary">Start</button></div>
+					<button type="button" id="start" class="btn btn-primary">Start</button>
 		<!-- 			<p class="lead">
 					<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 					</p>
@@ -60,10 +81,10 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 		<!-- Script for Trivia Database -->
-		<script type="text/javascript" src="assets/javascript/trivia_database.js"></script>
+		<script type="text/javascript" src="assets/javascript/trivia_database_2.js"></script>
 
 		<!-- Script -->
-		<script type="text/javascript" src="assets/javascript/app.js"></script>
+		<script type="text/javascript" src="assets/javascript/app2.js"></script>
 
 	</body>
 </html>
