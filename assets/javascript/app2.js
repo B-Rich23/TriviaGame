@@ -21,7 +21,7 @@ $(document).ready(function() {
 
 		// Display timer
 		$('#show-timer').show();
-		
+
 		// Set question
 		$('#trivia').html(triviaInfo.question);
 
@@ -80,8 +80,8 @@ $(document).ready(function() {
 		// correct = correct
 		// incorrect = numQuestions - correct
 		console.log(correct);
-		$("#correct").html(correct);
-		$("#incorrect").html(numQuestions - correct);
+		$("#correct").html("Correct: " + correct);
+		$("#incorrect").html("Incorrect: " + numQuestions - correct);
 	}
 
 	$('#option1').click(function() {
