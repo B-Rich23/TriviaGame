@@ -9,14 +9,14 @@ $(document).ready(function() {
 	function runGame() {
 		var triviaInfo = triviaData[triviaIndex];
 
-		// Set interval
-		intervalId = setInterval(decrement, 1000);
+		// // Set interval
+		// intervalId = setInterval(decrement, 1000);
 
-	    //  The decrement function.
-	    function decrement() {
+	 //    //  The decrement function.
+	 //    function decrement() {
 
-	     //  Decrease number by one.
-	     timer--;
+	 //     //  Decrease number by one.
+	 //     timer--;
 
 
 		// Display timer
@@ -35,7 +35,7 @@ $(document).ready(function() {
 		$('#questions-section').show();
 	}
 
-}
+// }
 
 	function setAnswer(optionIndex) {
 		var triviaInfo = triviaData[triviaIndex];
