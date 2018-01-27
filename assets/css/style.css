@@ -2,6 +2,33 @@ body {
 
 }
 
-/*.btn-disabled{
+.btn-disabled{
 display: none;
-}*/
+}
+
+.jumbotron {
+	margin-left: 205px;
+    margin-top: 325px;
+}
+
+.display-4 {
+	text-align: center;
+}
+
+.lead {
+	text-align: center;
+}
+
+#start {
+	padding-right: 55px;
+	padding-left: 55px;
+	margin-left: 328px;
+}
+
+.questions {
+	margin-left: 15px;
+}
+
+h2 {
+	margin-left: 29px;
+}

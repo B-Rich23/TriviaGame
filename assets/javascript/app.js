@@ -8,20 +8,45 @@ var timer = 3;
 
 var intervalId;
 
-var trivia = triviaData.slice(); 
-	timeToGuess = questionLength;
-	gameLength = trivia.length;
+var trivia; 
 
-// function hide() {
+var initialize;
+	// timeToGuess = questionLength;
+	// gameLength = trivia.length;
+
+ 
 //     $("button").attr("class", "btn-disabled");
     
 // 	}
+$(document).ready(function() {
 
-//  The run function sets an interval
+
+		//button click starts game
+      $("#start").on("click", function() {
+      	
+      	var trivia = jQuery.extend(true, {}, triviaData);
+		console.log(trivia); 
+
+		// Change class to hide start button
+		$("#start").toggleClass('btn-primary btn-disabled');
+
+//       	function hide() {
+//     $("#start").attr("display", "hidden");
+    
+// }
+		
+      	// hide();
+
+      	//  The run function sets an interval
     //  that runs the decrement function once a second.
-    function run() {
+    // initialize = run();
+
+
+    	// For loop to iterate through each index of trivia array
+    	// for (i = 0; i <= trivia.lenght; i++) {
+
       intervalId = setInterval(decrement, 1000);
-    }
+    // }
 
     //  The decrement function.
     function decrement() {
@@ -29,9 +54,13 @@ var trivia = triviaData.slice();
       //  Decrease number by one.
       timer--;
 
-      //  Show the number in the #show-number tag.
-      $("#show-timer").html("<h2>" + timer + "</h2>");
-      $("#trivia").html("<h2>" + trivia[0] + "</h2>");
+      //  Show the number in the #show-timer tag.
+      $("#show-timer").html("<h2>Time Remaining: " + timer + "</h2>");
+      $("#trivia").html("<h2>" + trivia.question1 + "</h2>");
+      $("#option1").html("<h2>" + trivia.answers1[0] + "</h2>");
+      $("#option2").html("<h2>" + trivia.answers1[1] + "</h2>");
+      $("#option3").html("<h2>" + trivia.answers1[2] + "</h2>");
+      $("#option4").html("<h2>" + trivia.answers1[3] + "</h2>");
 
 
       //  Once number hits zero...
@@ -39,7 +68,7 @@ var trivia = triviaData.slice();
       	stop();
 
         // TODO: Show the loading gif in the "image-holder" div.
-  $("#image-holder").html("<img src='assets/images/tzuricute.gif'/>");
+  $("#image-holder").html("<img " + trivia.image1 + ">");
       }
     }
 
@@ -51,6 +80,22 @@ var trivia = triviaData.slice();
       //  to the clearInterval function.
       clearInterval(intervalId);
     }
+})
+
+})
+
+
+      	//  Execute the run function.
+    	// run();
+    
+        //  Set the button alert's timeout to run three seconds after the function's called.
+        // delayButtonAlert = setTimeout(function() {
+        //   alert("Alert #2");
+        // }, 3000);
+    
+
+ 
+
 
     
 
@@ -66,24 +111,7 @@ var trivia = triviaData.slice();
 // }
 
 
-//button click starts game
-//  Start on click.
-      $("#start").on("click", function() {
 
-//       	function hide() {
-//     $("#start").attr("display", "hidden");
-    
-// }
-
-      	// hide();
-      	//  Execute the run function.
-    	run();
-    
-        //  Set the button alert's timeout to run three seconds after the function's called.
-        // delayButtonAlert = setTimeout(function() {
-        //   alert("Alert #2");
-        // }, 3000);
-      });
 
 //for loop cycles through questions
 
